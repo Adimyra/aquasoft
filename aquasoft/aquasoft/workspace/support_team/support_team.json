@@ -1,0 +1,135 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"HUcTsVA6Op\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Support Team Dashboard</span>\",\"col\":12}},{\"id\":\"4hA9ZX-VD6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Schedule\",\"col\":3}},{\"id\":\"VHdOqyuxAS\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ViVrHTPSny\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Issue &amp; Complaint</b></span>\",\"col\":12}},{\"id\":\"eo6LNGt0JR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Issue\",\"col\":3}},{\"id\":\"akFoYEoCfP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Issue \",\"col\":3}},{\"id\":\"tTNiRsD-xT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Forwarded to tech\",\"col\":3}},{\"id\":\"eMBo-S8yjB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Resolved Issue\",\"col\":3}},{\"id\":\"OZbeP_BFud\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Sperator\",\"col\":12}},{\"id\":\"Duz_p8_uLI\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Maintenance Management</b></span>\",\"col\":12}},{\"id\":\"lqffB6E1H1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Sperator\",\"col\":12}},{\"id\":\"lziKw-bvKP\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Spare Part Selling</b></span>\",\"col\":12}},{\"id\":\"XDyJ8ckyC-\",\"type\":\"card\",\"data\":{\"card_name\":\"Selling Workflow\",\"col\":4}},{\"id\":\"fvjpb1pvoH\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock Managment\",\"col\":4}},{\"id\":\"8mQdFzYBIw\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Sperator\",\"col\":12}},{\"id\":\"sNUqIC0_dh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Maintenance Planning</b></span>\",\"col\":12}}]",
+ "creation": "2024-08-11 14:56:36.972733",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Sperator",
+   "label": "Sperator"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "organization",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Support Team",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Selling Workflow",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice List",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Delivery Note List",
+   "link_count": 0,
+   "link_to": "Delivery Note",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Managment",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Balance",
+   "link_count": 0,
+   "link_to": "stock-balance",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-09-04 17:12:49.095634",
+ "modified_by": "Administrator",
+ "module": "Aquasoft",
+ "name": "Support Team",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Supervisor"
+  },
+  {
+   "role": "All"
+  }
+ ],
+ "sequence_id": 28.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "format": "{} Done",
+   "label": "Resolved Issue",
+   "link_to": "Issue",
+   "stats_filter": "[[\"Issue\",\"status\",\"=\",\"Resolved\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add Issue",
+   "link_to": "Issue",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} This Month",
+   "label": "Maintenance Schedule",
+   "link_to": "Maintenance Schedule",
+   "stats_filter": "[[\"Maintenance Schedule Detail\",\"scheduled_date\",\"Timespan\",\"this month\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} Open",
+   "label": "Issue ",
+   "link_to": "Issue",
+   "stats_filter": "[[\"Issue\",\"status\",\"=\",\"Open\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "format": "{} SMS",
+   "label": "Forwarded to tech",
+   "link_to": "Issue",
+   "stats_filter": "[[\"Issue\",\"status\",\"=\",\"Forwarded to Technician\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Support Team"
+}

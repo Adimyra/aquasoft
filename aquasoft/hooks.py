@@ -9,6 +9,52 @@ app_license = "mit"
 # Includes in <head>
 # ------------------
 
+# In aquasoft/hooks.py
+doc_events = {
+    "Installation Note": {
+        "on_submit": "aquasoft.installation_note_hooks.create_maintenance_visit_on_submit"
+    },
+    "Sales Invoice": {
+        "on_submit": [
+            # "aquasoft.custom_scripts.maintenance_visit.create_maintenance_visit_on_submit",
+            "aquasoft.custom_scripts.maintenance_action.create_maintenance_action_on_submit",
+            # "aquasoft.custom_scripts.first_visit_schedule.create_first_visit_schedule"
+            "aquasoft.custom_scripts.regular_maintenance_schedule.create_maintenance_schedule"
+        ]
+    },
+    "Subscription": {
+        "on_update": "aquasoft.custom_scripts.amc_sync.create_or_update_other_customer_amc"
+    },
+    "Issue":{
+        "on_update": "aquasoft.custom_scripts.create_mc_on_issue.create_maintenance_schedule_on_technician_update"
+    },
+    "Maintenance Visit": {
+        "on_submit": [
+            "aquasoft.custom_scripts.update_issue_resolved.update_issue_on_visit_completion"
+            # "aquasoft.custom_scripts.create_sales_invoice_from_visit.create_sales_invoice_from_visit"
+        ]
+    }
+    # "Maintenance Visit": {
+    #     "on_save": "aquasoft.custom_scripts.create_sales_invoice_from_visit.validate_sales_invoice_on_save",
+    # }
+}
+
+doctype_js = {
+    "Installation Note": "public/js/installation_note_create_visit.js",
+    "Subscription": "public/js/subscription.js",
+    "Maintenance Visit": "public/js/create_sales_invoice_button.js",
+    "subscription": "public/js/create_sales_invoice_btn_amc.js",
+
+    # "Maintenance Visit": "public/js/create_sales_invoice_on_save.js"
+    # "Sales Invoice": "public/js/create_maintenance_buttons.js"
+    # "Sales Invoice": "public/js/sales_invoice.js"
+
+    
+}
+
+after_migrate = "aquasoft.utils.add_shortcuts_to_support_team_workspace"
+
+
 # include js, css files in header of desk.html
 # app_include_css = "/assets/aquasoft/css/aquasoft.css"
 # app_include_js = "/assets/aquasoft/js/aquasoft.js"
@@ -129,6 +175,12 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+
+#doc_events = {
+   # "Delivery Note": {
+  #      "on_submit": "aquasoft.delivery_note_hooks.update_serial_no_warranty"
+ #   }
+#}
 
 # Scheduled Tasks
 # ---------------
