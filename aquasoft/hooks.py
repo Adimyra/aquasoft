@@ -42,6 +42,7 @@ doc_events = {
 doctype_js = {
     "Installation Note": "public/js/installation_note_create_visit.js",
     "Subscription": "public/js/subscription.js",
+    # "Sales Invoice": "public/js/sales_invoice.js",
     "Maintenance Visit": "public/js/create_sales_invoice_button.js",
     "subscription": "public/js/create_sales_invoice_btn_amc.js",
 
