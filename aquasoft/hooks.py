@@ -8,6 +8,20 @@ app_license = "mit"
 
 # Includes in <head>
 # ------------------
+# fixtures = [
+#     {"doctype": "Workspace", "filters": [
+#         ["name", "in", ["AS SUPPORT TEAM"]]
+#     ]}
+# ]
+fixtures = [
+    {
+        "dt": "Workspace", 
+        "filters": [
+            ["name", "in", ["AS SUPPORT TEAM", "AQUASOFT-care@adimyra.com"]]
+        ]
+    }
+]
+
 
 # In aquasoft/hooks.py
 doc_events = {

@@ -1,0 +1,73 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"rCwaLucKcu\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">AS SUPPORT TEAM</span>\",\"col\":12}},{\"id\":\"88dYfU_D7y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Issue / Complaint Management</b></span>\",\"col\":12}},{\"id\":\"1VP4OTiQPS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Issue\",\"col\":6}},{\"id\":\"d-wah-ED65\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Issue\",\"col\":6}},{\"id\":\"VuBQ5pLlaR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Forwarded to Tech\",\"col\":6}},{\"id\":\"IojfnhDa2r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Issue Resolved\",\"col\":6}},{\"id\":\"fceUTfgz2A\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"UqjsstAnB4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Maintenance Schedule &amp; Visit</b></span>\",\"col\":12}},{\"id\":\"OPBLuPkAub\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Due Schedule\",\"col\":3}}]",
+ "creation": "2024-09-05 14:37:09.847336",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "share-people",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "AS SUPPORT TEAM",
+ "links": [],
+ "modified": "2024-09-05 14:38:52.748028",
+ "modified_by": "Administrator",
+ "module": "Aquasoft",
+ "name": "AS SUPPORT TEAM",
+ "number_cards": [],
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 29.0,
+ "shortcuts": [
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "format": "{} SMS",
+   "label": "Forwarded to Tech",
+   "link_to": "Issue",
+   "stats_filter": "[[\"Issue\",\"status\",\"=\",\"Forwarded to Technician\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add Issue",
+   "link_to": "Issue",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} Open",
+   "label": "Issue",
+   "link_to": "Issue",
+   "stats_filter": "[[\"Issue\",\"status\",\"=\",\"Open\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} This Month",
+   "label": "Due Schedule",
+   "link_to": "Maintenance Schedule",
+   "stats_filter": "[[\"Maintenance Schedule Detail\",\"scheduled_date\",\"Timespan\",\"this month\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} Done",
+   "label": "Issue Resolved",
+   "link_to": "Issue",
+   "stats_filter": "[[\"Issue\",\"status\",\"=\",\"Resolved\",false],[\"Issue\",\"modified\",\"Timespan\",\"today\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "AS SUPPORT TEAM"
+}
